@@ -1,4 +1,4 @@
-package com.esmoltz.fullstackbackend.model;
+package com.esmoltz.fullstackbackend.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

@@ -1,6 +1,6 @@
 package com.esmoltz.fullstackbackend.service;
 
-import com.esmoltz.fullstackbackend.model.User;
+import com.esmoltz.fullstackbackend.entity.User;
 
 import java.util.List;
 import java.util.Optional;

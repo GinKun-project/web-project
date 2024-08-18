@@ -2,6 +2,7 @@ package com.esmoltz.fullstackbackend.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityCustomizer;
@@ -18,8 +19,9 @@ public class SecurityConfig {
                 .cors() // Enable CORS
                 .and()
                 .authorizeHttpRequests(authorize -> authorize
-                        .requestMatchers("/api/users/**").permitAll() // Permit all requests to the user API
-                        .anyRequest().authenticated() // Secure all other requests
+                        .requestMatchers("/api/users/**").permitAll()
+                        .requestMatchers(HttpMethod.DELETE,"/api/users/**").hasRole("ADMIN")
+                        .anyRequest().authenticated()
                 )
                 .formLogin().disable() // Disable form-based login if you're using token-based authentication or stateless API
                 .httpBasic().disable(); // Disable basic auth if not needed

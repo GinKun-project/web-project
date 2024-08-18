@@ -1,6 +1,6 @@
 package com.esmoltz.fullstackbackend.controller;
 
-import com.esmoltz.fullstackbackend.model.User;
+import com.esmoltz.fullstackbackend.entity.User;
 import com.esmoltz.fullstackbackend.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -11,6 +11,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/users")
+@CrossOrigin(origins = "http://localhost:5173")
 public class UserController {
 
     @Autowired

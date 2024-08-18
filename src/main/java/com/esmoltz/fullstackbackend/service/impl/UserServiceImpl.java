@@ -1,6 +1,6 @@
 package com.esmoltz.fullstackbackend.service.impl;
 
-import com.esmoltz.fullstackbackend.model.User;
+import com.esmoltz.fullstackbackend.entity.User;
 import com.esmoltz.fullstackbackend.repository.UserRepository;
 import com.esmoltz.fullstackbackend.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
